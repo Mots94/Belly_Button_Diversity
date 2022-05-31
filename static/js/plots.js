@@ -16,9 +16,15 @@ function init() {
 
                 .property("value", sample);
     
+        });
+
+        let initSample = sampleNames[0];
+        buildMetadata(initSample);
+        buildCharts(initSample);
+
     });
 
-})}
+};
 
 init();
 
@@ -87,8 +93,10 @@ function buildCharts(sample) {
 
         let layout = {
 
-            title: "Top 10 Bacterial Species Identified"
-        }
+            title: "Top 10 Bacterial Species Identified",
+            width: 425,
+            height: 375
+        };
 
         Plotly.newPlot("bar", trace, layout);
 
@@ -129,11 +137,8 @@ function buildCharts(sample) {
                 }
             },
 
-            margin: {
-
-                autoexpand: true
-            },
-
+            width: 1200,
+            height: 500, 
             hovermode: "closest"
         }
 
@@ -170,8 +175,8 @@ function buildCharts(sample) {
 
         washesLayout = {
             title: "Belly Button Washing Frequency",
-            width: 600,
-            height: 500
+            width: 425,
+            height: 375
         };
 
         Plotly.newPlot("gauge", washesData, washesLayout);
