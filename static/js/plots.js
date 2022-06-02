@@ -69,6 +69,8 @@ function buildCharts(sample) {
 
         let result1 = resultArray1[0];
 
+        console.log(result1);
+
         let otuIDs = result1.otu_ids;
 
         let otuLabels = result1.otu_labels;
